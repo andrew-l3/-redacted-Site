@@ -1,0 +1,135 @@
+@import 'global';
+
+.resources_header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    mix-blend-mode: hue;
+    background-color: #F7F7F7;
+
+    @include query(mobile) {
+        padding-top: 4rem;
+    }
+}
+
+/*.work_header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    mix-blend-mode: hue;
+    background-color: #F7F7F7;
+}
+
+.work_container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.title_heading {
+    position: relative;
+    display: inline-block;
+    font-family: 'Switzer';
+    font-size: 104px;
+    font-weight: 600;
+    color: #5C5C5C;
+    letter-spacing: -5px;
+    padding-bottom: 8px;
+}
+
+.title_heading.alt {
+    color: #DADADA;
+}
+
+.work_hero_btn {
+    position: relative;
+    display: inline-flex;
+    padding: 12px 16px;
+    background-color: #3E77E9;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.work_hero_link {
+    font-size: 14px;
+    padding-right: 8px;
+    line-height: 1;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.work_hero_btn i {
+    color: #ffffff;
+    line-height: 1;
+}
+
+.work_btn_container {
+    display: flex;
+    align-items: center;
+}
+
+.work_hero_link.lgt {
+    color: #5C5C5C;
+    padding-left: 22px;
+}*/
+
+.resources_accordion {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    position: relative;
+    width: 80vw;
+
+    @include query(mobile) {
+        width: calc(100% - 36px) !important;
+    }
+}
+
+.accordion_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 0;
+    border-bottom: 1px solid #E7E7E7;
+
+    @include query(mobile) {
+        width: calc(100% - 36px) !important;
+        gap: 54px;
+    }
+
+    &.last {
+        border: none;
+    }
+
+    & a {
+        font-family: 'Switzer';
+        font-size: 44px;
+        font-weight: 300;
+        color: #8A8A8A;
+        letter-spacing: -3px;
+        text-decoration: none;
+    }
+
+    & span {
+        font-family: 'Switzer';
+        font-size: 15px;
+        font-weight: 400;
+        color: #a4a4a4;
+        letter-spacing: -0.5px;
+        text-decoration: none;
+
+        @include query(mobile) {
+            font-size: 13px;
+            color: #cacaca;
+        }
+    }
+}
