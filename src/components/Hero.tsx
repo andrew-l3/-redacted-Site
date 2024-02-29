@@ -2,22 +2,23 @@
 import terminal from '../images/terminal.webp';
 import '../css/hero.scss';
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useEffect } from 'react';
-import useRefs from 'react-use-refs';
+import { useRef, useEffect } from 'react';
+/*import useRefs from 'react-use-refs';*/
 
 function Hero() {
-    const [container, mask] = useRefs(null);
-    let initial = 0;
+    const container = useRef<HTMLDivElement>(null);
+    const mask = useRef<HTMLDivElement>(null);
+    let initial:number = 0;
 
     useEffect(() => {requestAnimationFrame(expand)});
 
     const expand = () => {
-        mask.current.style.maskSize = (0.688 + progress()) * 100 + '%';
+        mask.current!.style.maskSize = (0.688 + progress()) * 100 + '%';
         requestAnimationFrame(expand);
     }
 
     const progress = () => {
-        const curr = mask.current.offsetTop / (container.current.getBoundingClientRect().height - window.innerHeight);
+        const curr:number = mask.current!.offsetTop / (container.current!.getBoundingClientRect().height - window.innerHeight);
         return initial += (curr - initial) * 0.2;
     }
 

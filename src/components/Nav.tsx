@@ -3,23 +3,23 @@ import '../css/nav.scss';
 
 function Nav() {
     return (
-        <section class='nav_header'>
-            <div class='navbar'>
-                <div class='nav_logo'>
-                    <a href='/#'><img src={cseSoc} alt=''></img></a>
+        <section className='nav_header'>
+            <div className='navbar'>
+                <div className='nav_logo'>
+                    <a href='/#'><img src={cseSoc} alt='cseSoc main logo'></img></a>
                 </div>
                 <div className='hamburger_menu_container'>
                     <label className='hamburger_menu'>
                         <input type='checkbox'></input>
-                        <div class='nav_buttons'>
-                            <div class='nav_links'>
+                        <div className='nav_buttons'>
+                            <div className='nav_links'>
                                 <a href='/#'>Home</a>
                                 <a href='/#'>About Us</a>
                                 <a href='/#'>Get In Touch</a>
                                 <a href='/#'>Events</a>
                                 <a href='/#'>Resources</a>
                             </div>
-                            <div class='cta_links'>
+                            <div className='cta_links'>
                                 <a href='/#'>Sponsorship</a>
                             </div>
                         </div>

@@ -1,9 +1,9 @@
-import Hero from './components/Hero.jsx';
-import Nav from './components/Nav.jsx';
-import Work from './components/Work.jsx';
-import Resources from './components/Resources.jsx';
-import Footer from './components/Footer.jsx';
-import Sponsor from './components/Sponsor.jsx';
+import Hero from './components/Hero';
+import Nav from './components/Nav';
+import Work from './components/Work';
+import Resources from './components/Resources';
+import Footer from './components/Footer';
+import Sponsor from './components/Sponsor';
 
 function App() {
   return (

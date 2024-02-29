@@ -1,4 +1,4 @@
-export const resourceLinks = [
+export const resourceLinks: Record<string, string>[] = [
   {
     title: 'Circles',
     description: 'A UNSW degree planner where you can explore and validate your degree structure.',
