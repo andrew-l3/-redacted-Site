@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     mix-blend-mode: hue;
 }
 
@@ -15,7 +15,7 @@
     flex-direction: column;
     width: 80vw;
 
-    @include query(mobile) {
+    @include device(mobile) {
         width: calc(100% - 36px) !important;
     }
 }
@@ -27,8 +27,17 @@
     align-items: center;
     width: 100%;
 
-    @include query(mobile) {
+    @include device(mobile) {
         flex-direction: column;
+    }
+
+    a {
+        text-decoration: none;
+        @include font($font-stack, 14px, 400, -0.2px, #aeaeae);
+    
+        &:hover {
+            color: #212121;
+        }
     }
 }
 
@@ -36,13 +45,13 @@
     display: flex;
     flex-direction: column;
 
-    @include query(mobile) {
+    @include device(mobile) {
         width: 100%;
         padding-top: 4rem;
     }
 }
 
-.footer_logo {
+.footer_logo img {
     position: relative;
     left: -20px;
     max-height: 110px;
@@ -54,6 +63,11 @@
     flex-direction: column;
     gap: 12px;
     padding-top: 20px;
+
+    :nth-child(2) {
+        text-decoration: underline;
+        text-decoration-color: #d4d4d4;
+    }
 }
 
 .footer_navs {
@@ -61,20 +75,10 @@
     flex-direction: column;
     padding-top: 8rem;
 
-    @include query(mobile) {
+    @include device(mobile) {
         width: 100%;
         padding-top: 5rem;
     }
-}
-
-.footer_link {
-    display: block;
-    text-decoration: none;
-    font-family: 'Switzer';
-    font-size: 14px;
-    font-weight: 300;
-    color: #5C5C5C;
-    letter-spacing: -0.2px;
 }
 
 .footer_nav_links {
@@ -83,15 +87,8 @@
     gap: 15px;
 }
 
-.footer_link.alt {
-    text-decoration: underline;
-}
-
 .footer_navs_header {
-    display: block;
-    font-family: 'Switzer';
-    font-size: 18px;
-    font-weight: 500;
+    @include font($font-stack, 18px, 500, inherit, inherit);
 }
 
 .footer_links_container {
@@ -103,9 +100,5 @@
 .footer_copyright {
     display: block;
     padding-top: 8rem;
-    font-family: 'Switzer';
-    font-size: 14px;
-    color: #5C5C5C;
-    letter-spacing: -0.2px;
-    font-weight: 300;
+    @include font($font-stack, 14px, 300, -0.2px, #5c5c5c);
 }

@@ -7,27 +7,27 @@ function Footer() {
             <div class='outer_footer_container'>
                 <div class='footer_container'>
                     <div class='footer_meta'>
-                        <div className=''>
-                            <img src={cseSoc} alt='' class='footer_logo'></img>
+                        <div className='footer_logo'>
+                            <img src={cseSoc} alt=''></img>
                         </div>
                         <div class='footer_links'>
-                            <a class='footer_link' href='/#'>B03 CSE Building K17, UNSW</a>
-                            <a class='footer_link alt' href='/#'>csesoc@csesoc.org.au</a>
+                            <a href='/#'>B03 CSE Building K17, UNSW</a>
+                            <a href='/#'>csesoc@csesoc.org.au</a>
                         </div>
                     </div>
                     <div class='footer_navs'>
                         <span class='footer_navs_header'>Social Media</span>
                         <div class='footer_links_container'>
                             <div class="footer_nav_links">
-                                <a class='footer_link' href='/#'>Discord Community</a>
-                                <a class='footer_link' href='/#'>Facebook Page</a>
-                                <a class='footer_link' href='/#'>Facebook Group</a>
-                                <a class='footer_link' href='/#'>Linkedin</a>
+                                <a href='/#'>Discord Community</a>
+                                <a href='/#'>Facebook Page</a>
+                                <a href='/#'>Facebook Group</a>
+                                <a href='/#'>Linkedin</a>
                             </div>
                             <div class="footer_nav_links">
-                                <a class='footer_link' href='/#'>Instagram</a>
-                                <a class='footer_link' href='/#'>YouTube</a>
-                                <a class='footer_link' href='/#'>TikTok</a>
+                                <a href='/#'>Instagram</a>
+                                <a href='/#'>YouTube</a>
+                                <a href='/#'>TikTok</a>
                             </div>
                         </div>
                     </div>

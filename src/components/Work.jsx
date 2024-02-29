@@ -10,11 +10,8 @@ function Work() {
             <div class='work_container'>
                 <span class='title_heading'>Our <span class='title_heading alt'>Work</span></span>
                 <div class='work_btn_container'>
-                    <div class='work_hero_btn'>
-                        <a class='work_hero_link' href='/#'>Get Involved</a>
-                        <i class="bi bi-arrow-right"></i>
-                    </div>
-                    <a class='work_hero_link lgt' href='/#'>Discover More</a>
+                    <a className='primary_btn' href='/#'>Get Involved</a>
+                    <a class='discover_btn' href='/#'>Discover More</a>
                 </div>
             </div>
             <div class='work_image_grid'>

@@ -1,5 +1,8 @@
 @import 'global';
 
+$btn-color: #9c7dff;
+$background: #f7f7f7;
+
 .sponsor_header {
     display: flex;
     height: calc(100vh - 53.5px - 60px);
@@ -8,170 +11,55 @@
     align-items: center;
     justify-content: center;
     mix-blend-mode: hue;
-    background-color: #F7F7F7;
+    background-color: $background;
+    padding-top: 4rem;
 
-    @include query(mobile) {
+    .primary_btn {
+        @include primaryBtn($btn-color, $background);
+    }
+
+    @include device(mobile) {
         height: 100%;
     }
-}
 
-/*.navHeader:after {
-    content: "";
-    background-image: url(../images/shape2.webp);
-    background-size: cover;
-    background-position: 50% 80%;
-    opacity: 0.3;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    mix-blend-mode: color-burn;
-    z-index: 2;
-}*/
+    .outer_container {
+        height: 65vh;
+        width: 80vw;
+        background-color: $btn-color;
+        gap: clamp(40px, 4.5vw, 100px);
+        border-radius: 20px;
 
-/*.hero {
-    position: relative;
-}*/
+        @include device(mobile) {
+            height: auto;
+            width: calc(100vw - 18px);
+        }
+    }
 
-.resourceContent:before {
-    content: "";
-    background-image: url(../images/shape2.webp);
-    background-size: cover;
-    background-position: 50% 0%;
-    opacity: 0.3;
-    position: absolute;
-    top: 360vh;
-    width: 100%;
-    height: 135%;
-    mix-blend-mode: color-burn;
-    z-index: 2;
+    .text_content {
+        gap: clamp(22px, 3.5vw, 70px);
+    }
 
-    @include query(mobile) {
-        top: 625vh;
+    .sub_heading {
+        color: #fff;
+        max-width: clamp(411px, 23.9vw, 500px);
+
+        @include device(mobile) {
+            width: 50%;
+        }
     }
 }
 
-.sponsor_outer_container {
-    height: 65vh;
-    width: 80vw;
-    background-color: #9C7DFF;
-    border-radius: 20px;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-
-    @include query(mobile) {
-        flex-direction: column;
-        height: auto;
-        width: calc(100% - 18px) !important;
-    }
-}
-
-.sponsor_header {
-    padding-top: 4rem;
-}
-
-.sponsor_purple {
-    height: 50vh;
-    position: relative;
-    left: 60px;
+.sponsor_image {
+    height: clamp(50px, 15.5vw, 400px);
     mix-blend-mode: lighten;
-    padding: 30px 0;
 
-    @include query(mobile) {
-        top: 9px;
-        left: -54px;
-        opacity: 0.2;
-    }
-}
-
-.sponsor_text_content {
-    position: relative;
-    left: 140px;
-    top: -10px;
-
-    @include query(mobile) {
-        left: 18px;
-        padding-bottom: 10px;
-    }
-}
-
-.sponsor_heading {
-    position: relative;
-    top: -28px;
-    left: -40px;
-    display: block;
-    font-family: 'Switzer';
-    font-size: 154px;
-    font-weight: 600;
-    color: #ffffff;
-    letter-spacing: -7px;
-
-    @include query(mobile) {
-        font-size: 110px;
-        line-height: 1;
-        top: 0; left: 0;
-        letter-spacing: -0.25rem;
-    }
-}
-
-.sponsor_sub_heading {
-    position: relative;
-    left: -30px;
-    top: -12px;
-    display: block;
-    font-family: 'Switzer';
-    font-size: 14px;
-    font-weight: 400;
-    color: #DCDCDC;
-    letter-spacing: -0.4px;
-    width: 45%;
-
-    @include query(mobile) {
-        padding: 45px 0 27px 0;
-        left: 9px;
-        width: 65%;
-    }
-}
-
-.sponsor_btn {
-    position: relative;
-    top: -16px;
-    left: -340px;
-    display: flex;
-    padding: 3px 16px;
-    background-color: #f7f7f7;
-    border-radius: 12px;
-    align-items: center;
-
-    @include query(mobile) {
-        background-color: transparent;
-        left: -9px;
+    @include device(mobile) {
+        height: clamp(50px, 6vh, 400px);
+        padding: 4vh 0 38vh 12px;
+        mix-blend-mode: color-burn;
     }
 
-    & i {
-        color: #9C7DFF;
-        line-height: 1;
+    img {
+        height: 100%;
     }
-}
-
-.sponsor_btn_inner {
-    @include query(mobile) {
-        display: inline-flex;
-        position: relative;
-        padding: 14px 16px;
-        background-color: #f7f7f7;
-        border-radius: 12px;
-    }
-}
-
-.sponsor_link {
-    font-size: 14px;
-    padding-right: 8px;
-    line-height: 1;
-    text-decoration: none;
-    letter-spacing: -0.3px;
-    color: #9C7DFF;
-    font-weight: 500;
 }

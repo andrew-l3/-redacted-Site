@@ -1,13 +1,18 @@
 @import 'global';
 
+$btn-color: #5a8cf7;
+$link-color: #717171;
+$mobile-menu: #212121;
+
 .nav_header {
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
-    padding-top: 36px;
-    background-color: #F7F7F7;
-    mix-blend-mode: hue;
+    padding-top: 0;
+    background-color: #f7f7f7;
+    mix-blend-mode: darken;
+    z-index: 1;
 }
 
 .navbar {
@@ -15,61 +20,166 @@
     justify-content: space-between;
     align-items: center;
     width: 80vw;
+    margin-top: 36px;
 
-    @include query(mobile) {
+    @include device(mobile) {
         width: calc(100% - 18px) !important;
     }
 }
 
-.logo {
+.nav_logo {
     display: flex;
     align-items: center;
     mix-blend-mode: darken;
+
+    img {
+        max-height: 50px;
+    }
 }
 
-.lgo {
-    max-height: 50px;
-}
-
-.links {
-    align-items: center;
-}
-
-.lnk {
-    position: relative;
-    color: #717171;
-    background-color: #dfdfdf;
-    font-weight: 500;
-    font-size: 12px;
-    transition: ease-in-out 0.2s;
-}
-
-:is(.links, .cta) a {
-    text-decoration: none;
-}
-
-.lk1 {
-    border-radius: 10px 0px 0px 10px;
-    padding: 16px 22px 16px 26px;
-}
-
-.lk2 {
-    padding: 16px 22px;
-}
-
-.lk3 {
-    border-radius: 0px 10px 10px 0px;
-    padding: 16px 26px 16px 22px;
-}
-
-.lk4 {
-    background-color: #757575;
-    color: #ffffff;
-    border-radius: 10px;
-    padding: 16px 22px;
-}
-
-.buttons {
+.nav_buttons {
     display: flex;
     gap: 20px;
+
+    a {
+        @include font(inherit, 12px, 500, inherit, $link-color);
+        padding: 10px 16px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+
+    .cta_links a {
+        background-color: #757575;
+        color: #fff;
+        border-radius: 10px;
+        padding: 16px 22px;
+    
+        &:hover {
+            background-color: $btn-color;
+            color: #fff;
+        }
+    
+        @include device(mobile) {
+            padding: 0;
+            background-color: transparent;
+            color: $link-color;
+        }
+    }
+
+    @include device(mobile) {
+        flex-direction: column;
+        gap: 14px;
+        background-color: $mobile_menu;
+        border-radius: 20px;
+        align-items: flex-end;
+        justify-content: center;
+        padding-right: 44px;
+        position: absolute;
+        top: -27px;
+        right: -0px;
+        padding: 44px 44px 44px 150px;
+        overflow: hidden;
+        float: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.25s, opacity 0.25s ease-in-out;
+    }
+}
+
+.nav_links {
+
+    & a:nth-child(1) {
+        background-color: $btn-color;
+        color: #fff;
+
+        @include device(mobile) {
+            background-color: transparent;
+            color: $link-color;
+        }
+    }
+
+    & a:nth-child(2) {
+        margin-left: 4px !important;
+    }
+
+    & a:not(:nth-child(6)):hover {
+        background-color: $btn-color;
+        color: #fff;
+        border-radius: 50px;
+    }
+
+    @include device(mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 14px;
+    }
+}
+
+.hamburger_menu {
+    input {
+        display: none;
+    }
+
+    @include device(mobile) {
+        display: flex;
+        flex-direction: column;
+        gap: 5.5px;
+        align-items: flex-end;
+        padding-right: 9px;
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 26px;
+            height: 3px;
+            border-radius: 30px;
+            background-color: $mobile_menu;
+            position: relative;
+        }
+
+        input {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 3px;
+            border-radius: 30px;
+            background-color: $mobile_menu;
+            appearance: none;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            pointer-events: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        input:checked {
+            background-color: #fff;
+
+        }
+
+        input:checked + .nav_buttons {
+            overflow: visible;
+            float: right;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .nav_buttons a {
+            font-size: 26px;
+            font-weight: 300;
+            padding: 0;
+
+            @include device(mobile) {
+                &:hover {
+                    color: #fff;
+                    background-color: initial;
+                }
+            }
+
+        }
+    }
 }
