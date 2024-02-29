@@ -1,4 +1,4 @@
-import cseSoc from '../images/cseSoc.webp';
+import logo from '../images/logo.webp';
 import '../css/nav.scss';
 
 function Nav() {
@@ -6,7 +6,7 @@ function Nav() {
         <section className='nav_header'>
             <div className='navbar'>
                 <div className='nav_logo'>
-                    <a href='/#'><img src={cseSoc} alt='cseSoc main logo'></img></a>
+                    <a href='/#'><img src={logo} alt='cseSoc main logo'></img></a>
                 </div>
                 <div className='hamburger_menu_container'>
                     <label className='hamburger_menu'>

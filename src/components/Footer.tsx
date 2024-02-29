@@ -1,4 +1,4 @@
-import cseSoc from '../images/cseSoc.webp';
+import logo from '../images/logo.webp';
 import '../css/footer.scss';
 
 function Footer() {
@@ -8,7 +8,7 @@ function Footer() {
                 <div className='footer_container'>
                     <div className='footer_meta'>
                         <div className='footer_logo'>
-                            <img src={cseSoc} alt=''></img>
+                            <img src={logo} alt=''></img>
                         </div>
                         <div className='footer_links'>
                             <a href='/#'>B03 CSE Building K17, UNSW</a>

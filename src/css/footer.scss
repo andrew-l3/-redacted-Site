@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f7f7f7;
+    background-color: $background;
     mix-blend-mode: hue;
 }
 
@@ -16,7 +16,7 @@
     width: 80vw;
 
     @include device(mobile) {
-        width: calc(100% - 36px) !important;
+        width: calc(100% - 36px);
     }
 }
 
@@ -36,7 +36,7 @@
         @include font($font-stack, 14px, 400, -0.2px, #aeaeae);
     
         &:hover {
-            color: #212121;
+            color: $link-hover;
         }
     }
 }
@@ -52,10 +52,8 @@
 }
 
 .footer_logo img {
-    position: relative;
-    left: -20px;
-    max-height: 110px;
-    mix-blend-mode: darken;
+    max-height: 56px;
+    padding: 20px 0;
 }
 
 .footer_links {

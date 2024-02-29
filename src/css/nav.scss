@@ -1,8 +1,6 @@
 @import 'global';
 
-$btn-color: #5a8cf7;
 $link-color: #717171;
-$mobile-menu: #212121;
 
 .nav_header {
     display: flex;
@@ -10,7 +8,7 @@ $mobile-menu: #212121;
     align-items: center;
     justify-content: center;
     padding-top: 0;
-    background-color: #f7f7f7;
+    background-color: $background;
     mix-blend-mode: darken;
     z-index: 1;
 }
@@ -23,7 +21,7 @@ $mobile-menu: #212121;
     margin-top: 36px;
 
     @include device(mobile) {
-        width: calc(100% - 18px) !important;
+        width: calc(100% - 18px);
     }
 }
 
@@ -33,7 +31,12 @@ $mobile-menu: #212121;
     mix-blend-mode: darken;
 
     img {
-        max-height: 50px;
+        max-height: 26px;
+        padding: 17px 0px 7px 12px;
+
+        @include device(mobile) {
+            padding: 15px 0px 9px 9px;
+        }
     }
 }
 
@@ -69,7 +72,7 @@ $mobile-menu: #212121;
     @include device(mobile) {
         flex-direction: column;
         gap: 14px;
-        background-color: $mobile_menu;
+        background-color: $link-hover;
         border-radius: 20px;
         align-items: flex-end;
         justify-content: center;
@@ -98,14 +101,16 @@ $mobile-menu: #212121;
         }
     }
 
-    & a:nth-child(2) {
-        margin-left: 4px !important;
-    }
-
     & a:not(:nth-child(6)):hover {
         background-color: $btn-color;
         color: #fff;
         border-radius: 50px;
+    }
+
+    @include device(desktop) {
+        & a:nth-child(n+1):not(:nth-child(6)) {
+            margin-left: 4px;
+        }
     }
 
     @include device(mobile) {
@@ -136,7 +141,7 @@ $mobile-menu: #212121;
             width: 26px;
             height: 3px;
             border-radius: 30px;
-            background-color: $mobile_menu;
+            background-color: $link-hover;
             position: relative;
         }
 
@@ -146,7 +151,7 @@ $mobile-menu: #212121;
             width: 18px;
             height: 3px;
             border-radius: 30px;
-            background-color: $mobile_menu;
+            background-color: $link-hover;
             appearance: none;
             padding: 0;
             margin: 0;

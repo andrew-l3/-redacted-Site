@@ -8,10 +8,10 @@
     justify-content: center;
     padding-top: 6rem;
     mix-blend-mode: hue;
-    background-color: #f7f7f7;
+    background-color: $background;
 
     @include device(mobile) {
-        padding-top: 9rem !important;
+        padding-top: 9rem;
     }
 }
 
@@ -22,7 +22,7 @@
     position: relative;
 
     @include device(mobile) {
-        width: calc(100% - 36px) !important;
+        width: calc(100% - 36px);
     }
 }
 
@@ -33,7 +33,7 @@
     line-height: 1;
 
     @include device(mobile) {
-        font-size: 80px !important;
+        font-size: 80px;
         line-height: 1;
     }
 
@@ -48,7 +48,7 @@
     padding-top: 18px;
 
     .primary_btn {
-        @include primaryBtn(#fff, #3a76f8);
+        @include primaryBtn(#fff, $btn-color);
     }
 }
 

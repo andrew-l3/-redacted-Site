@@ -8,7 +8,7 @@
     justify-content: center;
     padding-top: 6rem;
     mix-blend-mode: hue;
-    background-color: #f7f7f7;
+    background-color: $background;
 
     @include device(mobile) {
         padding-top: 4rem;
@@ -26,7 +26,7 @@
     }
 
     @include device(mobile) {
-        width: calc(100% - 36px) !important;
+        width: calc(100% - 36px);
 
         a:nth-child(3) {
             gap: 0;
@@ -43,7 +43,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 36px 0;
-    border-bottom: 1px solid #E7E7E7;
+    border-bottom: 1px solid #e7e7e7;
     text-decoration: none;
 
     @include device(mobile) {
@@ -52,7 +52,7 @@
     }
 
     &:hover :is(a, span) {
-        color: #212121;
+        color: $link-hover;
     }
 
     span {
