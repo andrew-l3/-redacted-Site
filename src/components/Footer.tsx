@@ -1,4 +1,4 @@
-import logo from '../images/logo.webp';
+import logo from '../images/not_logo.webp';
 import '../css/footer.scss';
 
 function Footer() {
@@ -8,11 +8,11 @@ function Footer() {
                 <div className='footer_container'>
                     <div className='footer_meta'>
                         <div className='footer_logo'>
-                            <img src={logo} alt=''></img>
+                            <a href='/#'><img src={logo} alt=''></img></a>
                         </div>
                         <div className='footer_links'>
-                            <a href='/#'>B03 CSE Building K17, UNSW</a>
-                            <a href='/#'>csesoc@csesoc.org.au</a>
+                            <a href='/#'>ABC (Redacted) Building DEF, (Redacted)</a>
+                            <a href='/#'>(redacted)@(redacted).org.au</a>
                         </div>
                     </div>
                     <div className='footer_navs'>
@@ -33,7 +33,7 @@ function Footer() {
                     </div>
                 </div>
                 <div>
-                    <span className='footer_copyright'>© 2024 — CSESoc UNSW</span>
+                    <span className='footer_copyright'>© 2024 — Definitely Not (Redacted)</span>
                 </div>
             </div>
       </section>

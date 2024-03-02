@@ -5,7 +5,7 @@ function Sites() {
     <div className='resources_accordion'>
         {resourceLinks.map((item, index) => {
           return (
-            <a className='accordion_item' href={item.description}>
+            <a className='accordion_item' href='/#'>
                 <span className='accordion_title'>{item.title}</span>
                 <span className='accordion_meta'>{item.description}</span>
             </a>

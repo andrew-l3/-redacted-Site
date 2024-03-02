@@ -1,4 +1,4 @@
-import logo from '../images/logo.webp';
+import logo from '../images/not_logo.webp';
 import '../css/nav.scss';
 import { motion } from "framer-motion"
 import { useState } from 'react';

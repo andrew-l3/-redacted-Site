@@ -34,7 +34,7 @@ function Hero() {
                     <div className='text_content'>
                         <span className='heading'>Hello World</span>
                         <div className='hero_content'>
-                            <span className='sub_heading'>We are the principal representative body for UNSW computing students</span>
+                            <span className='sub_heading'>We are the principal representative body for (redacted) computing students</span>
                             <a className='primary_btn' href='/#'>Get Involved</a>
                         </div>
                     </div>

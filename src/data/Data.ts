@@ -1,7 +1,7 @@
 export const resourceLinks: Record<string, string>[] = [
   {
     title: 'Circles',
-    description: 'A UNSW degree planner where you can explore and validate your degree structure.',
+    description: 'A (redacted) degree planner where you can explore and validate your degree structure.',
     link: '/#',
   },
   {
@@ -11,7 +11,7 @@ export const resourceLinks: Record<string, string>[] = [
   },
   {
     title: 'Job Board',
-    description: 'A place where CSESoc students can look for relevant job opportunities.',
+    description: 'A place where (redacted) students can look for relevant job opportunities.',
     link: '/#',
   },
   {
@@ -20,7 +20,7 @@ export const resourceLinks: Record<string, string>[] = [
     link: '/#',
   },
   {
-    title: 'CSElectives',
+    title: '(Redacted)Electives',
     description: 'Read course reviews to help you pick your electives or even write your own!',
     link: '/#',
   },
@@ -30,18 +30,18 @@ export const resourceLinks: Record<string, string>[] = [
     link: '/#',
   },
   {
-    title: 'CSESoc Media',
+    title: '(Redacted) Media',
     description: 'All things content.',
     link: '/#',
   },
   {
     title: 'First Year Guide',
-    description: 'The ultimate guide to conquering first year at CSE.',
+    description: 'The ultimate guide to conquering first year at (redacted).',
     link: '/#',
   },
   {
     title: 'Enrolment Guide',
-    description: 'Learn how to get a headstart on uni.',
+    description: 'Learn how to get a headstart on (redacted).',
     link: '/#',
   }
 ];

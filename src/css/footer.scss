@@ -99,4 +99,5 @@
     display: block;
     padding-top: 8rem;
     @include font($font-stack, 14px, 300, -0.2px, #5c5c5c);
+    text-decoration: line-through;
 }
