@@ -4,9 +4,9 @@ $background: #f7f7f7;
 $link-hover: #212121;
 
 $bp: (
-    mobile: '(max-width: 500px)' /*479px*/,
-    tablet: '(min-width: 501px and max-width: 767px)',
-    desktop: '(min-width: 959px)',
+    mobile: '(max-width: 500px)', //479
+    tablet: '(max-width: 1199px)', //958
+    desktop: '(min-width: 1200px)', //959
 ); 
 
 @mixin device($device) {
@@ -31,35 +31,36 @@ $bp: (
     color: $color;
 }
 
-@mixin background($url, $cover, $range, $repeat, $position, $top, $height, $blend, $opacity, $index) {
+@mixin background($url, $cover, $range, $repeat, $position, $top, $height, $width, $blend, $opacity, $index) {
     content: '';
     background-image: url($url);
     background-size: $cover;
     background-position: $range;
     background-repeat: $repeat;
     position: $position; top: $top;
-    height: $height; width: 100%;
+    height: $height; width: $width;
     mix-blend-mode: $blend;
     opacity: $opacity; z-index: $index;
     pointer-events: none;
 }
 
 .global_container:before {
-    @include background("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E", inherit, repeat, inherit, fixed, inherit, 100%, inherit, 0.12, 0);
+    @include background("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E", inherit, inherit, repeat, fixed, inherit, 100%, 100%, inherit, 0.12, 0);
 }
 
-.global_nav:before {
-    @include background('../images/shape1.webp', cover, inherit, 50% 80%, absolute, -20%, 138%, color-burn, 0.3, 1);
-    @include device(mobile) {
+.global_container:after {
+    @include background('../images/shape1.webp', cover, inherit, 50% 80%, absolute, -20%, 138%, 100%, color-burn, 0.3, 1);
+    @include device(tablet) {
         height: 125%;
     }
 }
 
-.global_resource:before {
-    @include background('../images/shape2.webp', cover, inherit, 50% 0%, absolute, 430vh, 150%, color-burn, 0.3, 1);
-    @include device(mobile) {
-        top: 525vh;
-    }
+.global_nav {
+    position: relative;
+}
+
+.global_sponsor:before {
+    @include background('../images/shape2.webp', cover, no-repeat, 50% 0%, absolute, inherit, 1234px, 100vw, color-burn, 0.3, 1); bottom: 35vh;
 }
 
 @mixin primaryBtn($color, $background) {
@@ -71,6 +72,7 @@ $bp: (
     border-radius: 12px;
     background-color: $background;
     text-decoration: none;
+    transition: 0.25s all ease-in-out;
 
     &:after {
         content: '\F138';
@@ -78,6 +80,11 @@ $bp: (
         font-size: 16px;
         padding-left: 8px;
     }
+
+    &:hover {
+        background-color: $link-hover;
+    }
+
 }
 
 .discover_btn {

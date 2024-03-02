@@ -14,7 +14,7 @@
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.17",
     "bootstrap-icons": "^1.11.3",
-    "framer-motion": "^11.0.6",
+    "framer-motion": "^11.0.8",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
@@ -54,5 +54,10 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1"
+  },
+  "overrides": {
+    "react-scripts": {
+      "typescript": "^5"
+    }
   }
 }

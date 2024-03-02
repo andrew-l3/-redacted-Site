@@ -17,18 +17,18 @@ $btn-color: #9c7dff;
         @include primaryBtn($btn-color, $background);
     }
 
-    @include device(mobile) {
+    @include device(tablet) {
         height: 100%;
     }
 
     .outer_container {
-        height: 65vh;
+        height: 70vh;
         width: 80vw;
         background-color: $btn-color;
         gap: clamp(40px, 4.5vw, 100px);
         border-radius: 20px;
 
-        @include device(mobile) {
+        @include device(tablet) {
             height: auto;
             width: calc(100vw - 18px);
         }
@@ -36,14 +36,19 @@ $btn-color: #9c7dff;
 
     .text_content {
         gap: clamp(22px, 3.5vw, 70px);
+
+        @include device(tablet) {
+            gap: clamp(0px, 1vw, 60px);
+        }
     }
 
     .sub_heading {
         color: #fff;
         max-width: clamp(411px, 23.9vw, 500px);
+        padding-top: 6px;
 
-        @include device(mobile) {
-            width: 50%;
+        @include device(tablet) {
+            width: 70%;
         }
     }
 }
@@ -52,7 +57,7 @@ $btn-color: #9c7dff;
     height: clamp(50px, 15.5vw, 400px);
     mix-blend-mode: lighten;
 
-    @include device(mobile) {
+    @include device(tablet) {
         height: clamp(50px, 6vh, 400px);
         padding: 4vh 0 38vh 12px;
         mix-blend-mode: color-burn;

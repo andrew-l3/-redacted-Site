@@ -9,10 +9,6 @@
     padding-top: 6rem;
     mix-blend-mode: hue;
     background-color: $background;
-
-    @include device(mobile) {
-        padding-top: 9rem;
-    }
 }
 
 .work_container {
@@ -21,7 +17,7 @@
     flex-direction: column;
     position: relative;
 
-    @include device(mobile) {
+    @include device(tablet) {
         width: calc(100% - 36px);
     }
 }
@@ -32,7 +28,7 @@
     padding-bottom: 14px;
     line-height: 1;
 
-    @include device(mobile) {
+    @include device(tablet) {
         font-size: 80px;
         line-height: 1;
     }
@@ -60,7 +56,7 @@
     flex: 25%;
     gap: 18px;
 
-    @include device(mobile) {
+    @include device(tablet) {
         flex-direction: column;
         width: calc(100% - 18px);
     }
@@ -71,7 +67,7 @@
         max-width: calc(25% - 54px/4);
         border-radius: 20px;
     
-        @include device(mobile) {
+        @include device(tablet) {
             max-width: 100%;
         }
     }

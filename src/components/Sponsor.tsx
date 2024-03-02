@@ -1,7 +1,6 @@
 import purple from '../images/purple.webp';
 import '../css/sponsor.scss';
 import "bootstrap-icons/font/bootstrap-icons.css";
-import {isMobile} from 'react-device-detect';
 
 function Sponsor() {
     return (
@@ -11,7 +10,9 @@ function Sponsor() {
                     <img src={purple} alt=''></img>
                 </div>
                 <div className='text_content'>
-                    {isMobile ? <span className='heading'>Support</span> : <span className='heading'>Sponsorship</span>}
+                    <span className='heading'>
+                        {window.matchMedia('(max-width: 1199px)').matches ? 'CSESoc' : 'Sponsors'}
+                    </span>
                     <div className='hero_content'>
                         <span className='sub_heading'>We have an extremely active community of over 3000 CSE students, achieved through our offering of career, social and educational events.</span>
                         <a className='primary_btn' href='/#'>Get Involved</a>

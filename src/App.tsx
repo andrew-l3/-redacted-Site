@@ -12,8 +12,8 @@ function App() {
         <Nav/>
         <Hero/>
         <Work/>
-        <div className='global_resource'>
-          <Resources/>
+        <Resources/>
+        <div className='global_sponsor'>
           <Sponsor/>
           <Footer/>
         </div>

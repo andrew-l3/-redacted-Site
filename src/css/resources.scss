@@ -10,7 +10,7 @@
     mix-blend-mode: hue;
     background-color: $background;
 
-    @include device(mobile) {
+    @include device(tablet) {
         padding-top: 4rem;
     }
 }
@@ -25,7 +25,7 @@
         border: none;
     }
 
-    @include device(mobile) {
+    @include device(tablet) {
         width: calc(100% - 36px);
 
         a:nth-child(3) {
@@ -46,7 +46,7 @@
     border-bottom: 1px solid #e7e7e7;
     text-decoration: none;
 
-    @include device(mobile) {
+    @include device(tablet) {
         width: 100%;
         gap: 54px;
     }
@@ -69,7 +69,7 @@
         -webkit-hyphens: auto;
         hyphens: auto;
 
-        @include device(mobile) {
+        @include device(tablet) {
             font-size: 13px;
             color: #cacaca;
         }

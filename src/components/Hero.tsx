@@ -3,7 +3,6 @@ import terminal from '../images/terminal.webp';
 import '../css/hero.scss';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { useRef, useEffect } from 'react';
-/*import useRefs from 'react-use-refs';*/
 
 function Hero() {
     const container = useRef<HTMLDivElement>(null);
@@ -13,7 +12,10 @@ function Hero() {
     useEffect(() => {requestAnimationFrame(expand)});
 
     const expand = () => {
-        mask.current!.style.maskSize = (0.688 + progress()) * 100 + '%';
+        let size:boolean = window.innerWidth >= 1200;
+        mask.current!.style.maskSize = ((size ? 0.8 : 1) + progress()) * 100 + '%';
+        mask.current!.style.height = ((size ? 0.7 : 1) + progress()) * 100 + 'vh';
+        mask.current!.style.top = (size ? Math.max((0.2 - progress() * 0.68) * 100, 0) : 0) + 'vh';
         requestAnimationFrame(expand);
     }
 

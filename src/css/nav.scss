@@ -9,8 +9,16 @@ $link-color: #717171;
     justify-content: center;
     padding-top: 0;
     background-color: $background;
-    mix-blend-mode: darken;
-    z-index: 1;
+    mix-blend-mode: hue;
+
+    @include device(desktop) {
+        padding-bottom: 10vh;
+    }
+
+    @include device(mobile) {
+        z-index: 1;
+        mix-blend-mode: inherit;
+    }
 }
 
 .navbar {
@@ -19,8 +27,9 @@ $link-color: #717171;
     align-items: center;
     width: 80vw;
     margin-top: 36px;
+    position: relative;
 
-    @include device(mobile) {
+    @include device(tablet) {
         width: calc(100% - 18px);
     }
 }
@@ -28,13 +37,12 @@ $link-color: #717171;
 .nav_logo {
     display: flex;
     align-items: center;
-    mix-blend-mode: darken;
 
     img {
         max-height: 26px;
         padding: 17px 0px 7px 12px;
 
-        @include device(mobile) {
+        @include device(tablet) {
             padding: 15px 0px 9px 9px;
         }
     }
@@ -62,40 +70,48 @@ $link-color: #717171;
             color: #fff;
         }
     
-        @include device(mobile) {
+        @include device(tablet) {
             padding: 0;
             background-color: transparent;
             color: $link-color;
         }
     }
 
-    @include device(mobile) {
+    @include device(tablet) {
         flex-direction: column;
         gap: 14px;
         background-color: $link-hover;
-        border-radius: 20px;
-        align-items: flex-end;
+        border-radius: 14px;
+        align-items: flex-start;
         justify-content: center;
-        padding-right: 44px;
-        position: absolute;
-        top: -27px;
-        right: -0px;
-        padding: 44px 44px 44px 150px;
+        padding: 44px 44px 44px 44px;
+        position: fixed;
+        top: calc(-48px + 22vh + 4px);
+        width: calc(100vw - 116px - 9px);
         overflow: hidden;
-        float: none;
         visibility: hidden;
         opacity: 0;
         transition: visibility 0.25s, opacity 0.25s ease-in-out;
+
+        &:before {
+            content: '\f149';
+            font-family: 'bootstrap-icons';
+            color: #fff;
+            position: absolute;
+            top: 24px;
+            right: 20px;
+            mix-blend-mode: soft-light;
+        }
+
     }
 }
 
 .nav_links {
-
     & a:nth-child(1) {
         background-color: $btn-color;
         color: #fff;
 
-        @include device(mobile) {
+        @include device(tablet) {
             background-color: transparent;
             color: $link-color;
         }
@@ -113,11 +129,69 @@ $link-color: #717171;
         }
     }
 
-    @include device(mobile) {
+    @include device(tablet) {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
         gap: 14px;
+    }
+}
+
+.social_links {
+    display: none;
+    
+    @include device(tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+        a:nth-child(1) i {
+            font-size: 18px;
+            padding-right: 14px;
+        }
+        a:nth-child(2) i {
+            font-size: 20px;
+            position: relative;
+            top: 1px;
+            padding-right: 16px;
+        }
+        a:nth-child(3) i {
+            font-size: 18px;
+            padding-right: 16px;
+        }
+        a:nth-child(4) i {
+            font-size: 18px;
+            padding-right: 16px;
+        }
+        a:nth-child(5) i {
+            font-size: 18px;
+            position: relative;
+            top: -1px;
+            padding-right: 16px;
+        }
+        a:nth-child(6) i {
+            font-size: 20px;
+            position: relative;
+            top: 0.2px;
+            padding-right: 16px;
+        }
+        a:nth-child(7) i {
+            font-size: 18px;
+            position: relative;
+            top: -1.5px;
+            padding-right: 15px;
+        }
+        a:nth-child(8) i {
+            font-size: 18px;
+            position: relative;
+            top: -2px;
+            padding-right: 14px;
+        }
+        a:nth-child(9) i {
+            font-size: 22px;
+            position: relative;
+            top: -0.5px;
+        }
     }
 }
 
@@ -126,7 +200,7 @@ $link-color: #717171;
         display: none;
     }
 
-    @include device(mobile) {
+    @include device(tablet) {
         display: flex;
         flex-direction: column;
         gap: 5.5px;
@@ -161,14 +235,8 @@ $link-color: #717171;
             z-index: 1;
         }
 
-        input:checked {
-            background-color: #fff;
-
-        }
-
         input:checked + .nav_buttons {
             overflow: visible;
-            float: right;
             visibility: visible;
             opacity: 1;
         }
@@ -178,7 +246,7 @@ $link-color: #717171;
             font-weight: 300;
             padding: 0;
 
-            @include device(mobile) {
+            @include device(tablet) {
                 &:hover {
                     color: #fff;
                     background-color: initial;
