@@ -1,3 +1,4 @@
+/* autoprefixer grid: autoplace */
 @import 'global';
 
 $btn-color: #9c7dff;
@@ -14,7 +15,7 @@ $btn-color: #9c7dff;
     padding-top: 4rem;
 
     .primary_btn {
-        @include primaryBtn($btn-color, $background);
+        @include primaryBtn($btn-color !important, $background);
     }
 
     @include device(tablet) {
@@ -59,8 +60,7 @@ $btn-color: #9c7dff;
 
     @include device(tablet) {
         height: clamp(50px, 6vh, 400px);
-        padding: 4vh 0 38vh 12px;
-        mix-blend-mode: color-burn;
+        padding: 3.5vh 0 38vh 20px;
     }
 
     img {

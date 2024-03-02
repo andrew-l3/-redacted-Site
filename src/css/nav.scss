@@ -1,3 +1,4 @@
+/* autoprefixer grid: autoplace */
 @import 'global';
 
 $link-color: #717171;
@@ -10,6 +11,7 @@ $link-color: #717171;
     padding-top: 0;
     background-color: $background;
     mix-blend-mode: hue;
+    z-index: 1;
 
     @include device(desktop) {
         padding-bottom: 10vh;
@@ -17,7 +19,6 @@ $link-color: #717171;
 
     @include device(mobile) {
         z-index: 1;
-        mix-blend-mode: inherit;
     }
 }
 
@@ -80,7 +81,7 @@ $link-color: #717171;
     @include device(tablet) {
         flex-direction: column;
         gap: 14px;
-        background-color: $link-hover;
+        background-color: rgba(255, 255, 255, 0.478);
         border-radius: 14px;
         align-items: flex-start;
         justify-content: center;
@@ -96,11 +97,22 @@ $link-color: #717171;
         &:before {
             content: '\f149';
             font-family: 'bootstrap-icons';
-            color: #fff;
+            color: $link-color;
             position: absolute;
             top: 24px;
             right: 20px;
-            mix-blend-mode: soft-light;
+            mix-blend-mode: darken;
+        }
+
+        &:after {
+            content: '';
+            position: fixed;
+            background-color: #000000bf;
+            -webkit-backdrop-filter: blur(0.1rem); backdrop-filter: blur(0.1rem);
+            top: 0; left: 0;
+            height: 100%; width: 100%;
+            z-index: -1;
+            mix-blend-mode: color-burn;
         }
 
     }
@@ -155,11 +167,7 @@ $link-color: #717171;
             top: 1px;
             padding-right: 16px;
         }
-        a:nth-child(3) i {
-            font-size: 18px;
-            padding-right: 16px;
-        }
-        a:nth-child(4) i {
+        a:is(:nth-child(3), :nth-child(4)) i {
             font-size: 18px;
             padding-right: 16px;
         }

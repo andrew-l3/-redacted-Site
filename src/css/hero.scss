@@ -1,3 +1,4 @@
+/* autoprefixer grid: autoplace */
 @import 'global';
 
 .hero_mask {
@@ -7,11 +8,16 @@
     overflow: hidden;
     position: -webkit-sticky; position: sticky;
     max-height: 100vh;
-    max-width: 100%;
+    height: 100vh;
     -webkit-mask-image: url('../mask.svg'); mask-image: url('../mask.svg');
     -webkit-mask-position: center center; mask-position: center center;
     -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
     -webkit-mask-size: 100%; mask-size: 100%;
+
+    @include device(tablet) {
+        -webkit-mask-size: 300vh !important; mask-size: 300vh !important;
+    }
+
 }
 
 .hero_header {
@@ -22,6 +28,19 @@
     position: relative;
     mix-blend-mode: hue;
     background-color: $background;
+
+    .social_links {
+        position: absolute;
+        display: block;
+        bottom: 16px; left: 20px;
+
+        a i {
+            font-size: 16px;
+            padding-right: 14px;
+            color: #fff;
+        }
+    }
+
 }
 
 .outer_container {

@@ -39,6 +39,11 @@ function Hero() {
                         </div>
                     </div>
                     <span className='date'>2024</span>
+                    <div className='social_links'>
+                        <a href='/#'><i className="bi bi-tiktok"></i></a>
+                        <a href='/#'><i className="bi bi-discord"></i></a>
+                        <a href='/#'><i className="bi bi-github"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
