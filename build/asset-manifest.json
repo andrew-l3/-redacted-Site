@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/andrew-l3.github.io/-redacted-Site/static/css/main.ef447804.css",
+    "main.js": "/andrew-l3.github.io/-redacted-Site/static/js/main.0e42bd7d.js",
+    "static/js/453.ed3810f9.chunk.js": "/andrew-l3.github.io/-redacted-Site/static/js/453.ed3810f9.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/andrew-l3.github.io/-redacted-Site/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/Switzer-Variable.ttf": "/andrew-l3.github.io/-redacted-Site/static/media/Switzer-Variable.fa6516b65d6b10e1a3c7.ttf",
+    "static/media/bootstrap-icons.woff2?": "/andrew-l3.github.io/-redacted-Site/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/lunar.webp": "/andrew-l3.github.io/-redacted-Site/static/media/lunar.3eeb2d6a0059fdb71fe9.webp",
+    "static/media/purple.webp": "/andrew-l3.github.io/-redacted-Site/static/media/purple.db559de2244eeb35b81c.webp",
+    "static/media/pets.webp": "/andrew-l3.github.io/-redacted-Site/static/media/pets.7cd32e1407ceb691bc13.webp",
+    "static/media/festive.webp": "/andrew-l3.github.io/-redacted-Site/static/media/festive.8439b3a0f9d4f5a5eddb.webp",
+    "static/media/shape1.webp": "/andrew-l3.github.io/-redacted-Site/static/media/shape1.9a96accd77b5a826bc11.webp",
+    "static/media/shape2.webp": "/andrew-l3.github.io/-redacted-Site/static/media/shape2.c48047672d08e5dac9cc.webp",
+    "static/media/bees.webp": "/andrew-l3.github.io/-redacted-Site/static/media/bees.c26dba0bf99fb925126d.webp",
+    "static/media/Switzer-Variable.woff2": "/andrew-l3.github.io/-redacted-Site/static/media/Switzer-Variable.9cc69377319a8d1e055e.woff2",
+    "static/media/Switzer-Variable.woff": "/andrew-l3.github.io/-redacted-Site/static/media/Switzer-Variable.5bf25a011bc7d69d49e1.woff",
+    "static/media/not_logo.webp": "/andrew-l3.github.io/-redacted-Site/static/media/not_logo.292cb3562fb75cddcfbb.webp",
+    "static/media/terminal.webp": "/andrew-l3.github.io/-redacted-Site/static/media/terminal.ae45ec619adf7aba75d7.webp",
+    "index.html": "/andrew-l3.github.io/-redacted-Site/index.html",
+    "static/media/mask.svg": "/andrew-l3.github.io/-redacted-Site/static/media/mask.c832be976038d3c7cf49.svg",
+    "main.ef447804.css.map": "/andrew-l3.github.io/-redacted-Site/static/css/main.ef447804.css.map",
+    "main.0e42bd7d.js.map": "/andrew-l3.github.io/-redacted-Site/static/js/main.0e42bd7d.js.map",
+    "453.ed3810f9.chunk.js.map": "/andrew-l3.github.io/-redacted-Site/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef447804.css",
+    "static/js/main.0e42bd7d.js"
+  ]
+}
