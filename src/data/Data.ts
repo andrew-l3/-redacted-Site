@@ -1,7 +1,7 @@
 export const resourceLinks: Record<string, string>[] = [
   {
     title: 'Circles',
-    description: 'A (redacted) degree planner where you can explore and validate your degree structure.',
+    description: 'A (not) degree planner where you can explore and validate your degree structure.',
     link: '/#',
   },
   {
@@ -11,7 +11,7 @@ export const resourceLinks: Record<string, string>[] = [
   },
   {
     title: 'Job Board',
-    description: 'A place where (redacted) students can look for relevant job opportunities.',
+    description: 'A place where (not) students can look for relevant job opportunities.',
     link: '/#',
   },
   {
@@ -20,7 +20,7 @@ export const resourceLinks: Record<string, string>[] = [
     link: '/#',
   },
   {
-    title: '(Redacted)Electives',
+    title: '(not)Electives',
     description: 'Read course reviews to help you pick your electives or even write your own!',
     link: '/#',
   },
@@ -30,13 +30,13 @@ export const resourceLinks: Record<string, string>[] = [
     link: '/#',
   },
   {
-    title: '(Redacted) Media',
+    title: '(not) Media',
     description: 'All things content.',
     link: '/#',
   },
   {
     title: 'First Year Guide',
-    description: 'The ultimate guide to conquering first year at (redacted).',
+    description: 'The ultimate guide to conquering first year at (not).',
     link: '/#',
   },
   {

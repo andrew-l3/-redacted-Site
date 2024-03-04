@@ -17,8 +17,8 @@ $link-color: #717171;
         padding-bottom: 10vh;
     }
 
-    @include device(mobile) {
-        z-index: 1;
+    @include device(tablet) {
+        mix-blend-mode: unset !important;
     }
 }
 
@@ -85,7 +85,7 @@ $link-color: #717171;
         border-radius: 14px;
         align-items: flex-start;
         justify-content: center;
-        padding: 44px 44px 44px 44px;
+        padding: 54px 44px 44px 44px;
         position: fixed;
         top: calc(-48px + 22vh + 4px);
         width: calc(100vw - 116px - 9px);
@@ -97,18 +97,18 @@ $link-color: #717171;
         &:before {
             content: '\f149';
             font-family: 'bootstrap-icons';
-            color: $link-color;
+            color: #000000d1;
             position: absolute;
             top: 24px;
             right: 20px;
-            mix-blend-mode: darken;
+            mix-blend-mode: overlay;
         }
 
         &:after {
             content: '';
             position: fixed;
             background-color: #000000bf;
-            -webkit-backdrop-filter: blur(0.1rem); backdrop-filter: blur(0.1rem);
+//            -webkit-backdrop-filter: blur(0.1rem); backdrop-filter: blur(0.1rem);
             top: 0; left: 0;
             height: 100%; width: 100%;
             z-index: -1;
@@ -156,6 +156,9 @@ $link-color: #717171;
         align-items: center;
         justify-content: center;
         position: relative;
+        padding-top: 20px;
+        transform: scale(0.8);
+        transform-origin: left;
         
         a:nth-child(1) i {
             font-size: 18px;
@@ -178,7 +181,7 @@ $link-color: #717171;
             padding-right: 16px;
         }
         a:nth-child(6) i {
-            font-size: 20px;
+            font-size: 18px;
             position: relative;
             top: 0.2px;
             padding-right: 16px;
@@ -253,6 +256,8 @@ $link-color: #717171;
             font-size: 26px;
             font-weight: 300;
             padding: 0;
+            color: #000000d1;
+            mix-blend-mode: overlay;
 
             @include device(tablet) {
                 &:hover {
