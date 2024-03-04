@@ -5,6 +5,9 @@ import lunar from '../images/lunar.webp';
 import '../css/work.scss';
 
 function Work() {
+
+    const images:any[] = [lunar, festive, pets, bees];
+
     return (
         <section className='work_header'>
             <div className='outer_work_container'>
@@ -18,10 +21,11 @@ function Work() {
                 <q className='sub_heading'>We are one of the biggest and most active societies at (redacted), catering to over 3500 (redacted) students spanning across degrees in Computer Science, Software Engineering, Bioinformatics and Computer Engineering. We run a wide-variety of events for fun, learning new skills and careers. For full listings, check out the (redacted) <a className='inner_link' href='/#'>Discord</a> or our <a className='inner_link' href='/#'>Facebook</a> page!</q>
             </div>
             <div className='work_image_grid'>
-                <img src={lunar} alt='' className=''></img>
-                <img src={festive} alt='' className=''></img>
-                <img src={pets} alt='' className=''></img>
-                <img src={bees} alt='' className=''></img>
+                {images.map((item) => {
+                    return (
+                        <img src={item} alt='' className=''></img>
+                    );
+                })}
             </div>
       </section>
     )

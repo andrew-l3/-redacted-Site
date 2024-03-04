@@ -70,7 +70,7 @@ export const navLinks = [
 
 ]
 
-export const footerLinks = [
+export const footerLinksMain = [
   {
     title: 'Discord Community',
     link: '/#',
@@ -85,6 +85,21 @@ export const footerLinks = [
   },
   {
     title: 'Linkedin',
+    link: '/#',
+  }
+]
+
+export const footerLinksSec = [
+  {
+    title: 'Instagram',
+    link: '/#',
+  },
+  {
+    title: 'YouTube',
+    link: '/#',
+  },
+  {
+    title: 'TikTok',
     link: '/#',
   }
 ]

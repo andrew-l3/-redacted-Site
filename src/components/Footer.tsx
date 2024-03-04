@@ -1,5 +1,6 @@
 import logo from '../images/not_logo.webp';
 import '../css/footer.scss';
+import  { footerLinksMain, footerLinksSec } from '../data/Data';
 
 function Footer() {
     return (
@@ -19,15 +20,18 @@ function Footer() {
                         <span className='footer_navs_header'>Social Media</span>
                         <div className='footer_links_container'>
                             <div className="footer_nav_links">
-                                <a href='/#'>Discord Community</a>
-                                <a href='/#'>Facebook Page</a>
-                                <a href='/#'>Facebook Group</a>
-                                <a href='/#'>Linkedin</a>
+                                {footerLinksMain.map((item) => {
+                                    return (
+                                        <a href={item.link}>{item.title}</a>
+                                    );
+                                })}
                             </div>
                             <div className="footer_nav_links">
-                                <a href='/#'>Instagram</a>
-                                <a href='/#'>YouTube</a>
-                                <a href='/#'>TikTok</a>
+                                {footerLinksSec.map((item) => {
+                                    return (
+                                        <a href={item.link}>{item.title}</a>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>

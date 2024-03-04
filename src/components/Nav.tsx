@@ -1,9 +1,12 @@
 import logo from '../images/not_logo.webp';
 import '../css/nav.scss';
 import { motion } from "framer-motion"
-import { useState } from 'react';
+import { navLinks } from '../data/Data';
 
 function Nav() {
+
+    const icons:string[] = ['tiktok', 'discord', 'github', 'instagram', 'facebook', 'youtube', 'linkedin', 'twitter', 'wechat'];
+
     return (
         <section className='nav_header'>
             <div className='navbar'>
@@ -17,25 +20,21 @@ function Nav() {
                             className='nav_buttons'
                         >
                             <div className='nav_links'>
-                                <a href='/#'>Home</a>
-                                <a href='/#'>About Us</a>
-                                <a href='/#'>Get In Touch</a>
-                                <a href='/#'>Events</a>
-                                <a href='/#'>Resources</a>
+                                {navLinks.map((item) => {
+                                    return (
+                                        <a href={item.link}>{item.title}</a>
+                                    );
+                                })}
                             </div>
                             <div className='cta_links'>
                                 <a href='/#'>Sponsorship</a>
                             </div>
                             <div className='social_links'>
-                                <a href='/#'><i className="bi bi-tiktok"></i></a>
-                                <a href='/#'><i className="bi bi-discord"></i></a>
-                                <a href='/#'><i className="bi bi-github"></i></a>
-                                <a href='/#'><i className="bi bi-instagram"></i></a>
-                                <a href='/#'><i className="bi bi-facebook"></i></a>
-                                <a href='/#'><i className="bi bi-youtube"></i></a>
-                                <a href='/#'><i className="bi bi-linkedin"></i></a>
-                                <a href='/#'><i className="bi bi-twitter"></i></a>
-                                <a href='/#'><i className="bi bi-wechat"></i></a>
+                                {icons.map((item) => {
+                                    return (
+                                        <a href='/#'><i className={'bi bi-' + item}></i></a>
+                                    );
+                                })}
                             </div>
                         </motion.div>
                     </label>

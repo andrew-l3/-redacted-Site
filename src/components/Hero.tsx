@@ -24,6 +24,8 @@ function Hero() {
         return initial += (curr - initial) * 0.2;
     }
 
+    const icons:string[] = ['tiktok', 'discord', 'github'];
+
     return (
         <section ref={container} className='hero_header'>
             <div ref={mask} className='hero_mask'>
@@ -40,9 +42,11 @@ function Hero() {
                     </div>
                     <span className='date'>2024</span>
                     <div className='social_links'>
-                        <a href='/#'><i className="bi bi-tiktok"></i></a>
-                        <a href='/#'><i className="bi bi-discord"></i></a>
-                        <a href='/#'><i className="bi bi-github"></i></a>
+                        {icons.map((item) => {
+                            return (
+                                <a href='/#'><i className={'bi bi-' + item}></i></a>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

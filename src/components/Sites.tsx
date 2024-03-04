@@ -3,7 +3,7 @@ import  {resourceLinks} from '../data/Data';
 function Sites() {
   return (
     <div className='resources_accordion'>
-        {resourceLinks.map((item, index) => {
+        {resourceLinks.map((item) => {
           return (
             <a className='accordion_item' href='/#'>
                 <span className='accordion_title'>{item.title}</span>
