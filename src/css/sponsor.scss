@@ -34,7 +34,7 @@ $btn-color: #9c7dff;
             width: calc(100vw - 18px);
         }
 
-        .sponsor_image {
+        .partnership_image {
             display: block !important;
         }
     }
@@ -58,7 +58,7 @@ $btn-color: #9c7dff;
     }
 }
 
-.sponsor_image {
+.partnership_image {
     height: clamp(50px, 15.5vw, 400px);
     mix-blend-mode: lighten;
 

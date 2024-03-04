@@ -6,7 +6,7 @@ function Sponsor() {
     return (
         <section className='sponsor_header'>
             <div className='outer_container'>
-                <div className='sponsor_image'>
+                <div className='partnership_image'>
                     <img src={purple} alt=''></img>
                 </div>
                 <div className='text_content'>
