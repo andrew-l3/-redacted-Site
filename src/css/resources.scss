@@ -27,10 +27,6 @@
 
     @include device(tablet) {
         width: calc(100% - 36px);
-
-        a:nth-child(3) {
-            gap: 0;
-        }
     
         a:is(:nth-last-child(-n+2), :nth-child(3)) span:first-child {
             width: 100%;

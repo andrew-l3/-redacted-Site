@@ -11,7 +11,7 @@ function Sponsor() {
                 </div>
                 <div className='text_content'>
                     <span className='heading'>
-                        {window.matchMedia('(max-width: 1199px)').matches ? 'Sponsorships' : 'Partnerships'}
+                        {window.matchMedia('(max-width: 1199px)').matches ? 'Sponsors' : 'Partnerships'}
                     </span>
                     <div className='hero_content'>
                         <span className='sub_heading'>We have an extremely active community of over # students, achieved through our offering of career, social and educational events.</span>

@@ -86,8 +86,9 @@ $link-color: #717171;
         justify-content: center;
         padding: 54px 44px 44px 44px;
         position: fixed;
-        top: calc(-48px + 22vh + 4px);
-        width: calc(100vw - 116px - 9px);
+        top: calc(-48px + 22vh + 10px);
+        left: 9px;
+        width: calc(100vw - 107px);
         overflow: hidden;
         visibility: hidden;
         opacity: 0;
@@ -159,41 +160,41 @@ $link-color: #717171;
         
         a:nth-child(1) i {
             font-size: 18px;
-            padding-right: 14px;
+            padding-right: 16px;
         }
         a:nth-child(2) i {
             font-size: 20px;
             position: relative;
             top: 1px;
-            padding-right: 16px;
+            padding-right: 18px;
         }
         a:is(:nth-child(3), :nth-child(4)) i {
             font-size: 18px;
-            padding-right: 16px;
+            padding-right: 18px;
         }
         a:nth-child(5) i {
             font-size: 18px;
             position: relative;
             top: -1px;
-            padding-right: 16px;
+            padding-right: 18px;
         }
         a:nth-child(6) i {
             font-size: 18px;
             position: relative;
             top: 0.2px;
-            padding-right: 16px;
+            padding-right: 18px;
         }
         a:nth-child(7) i {
             font-size: 18px;
             position: relative;
             top: -1.5px;
-            padding-right: 15px;
+            padding-right: 17px;
         }
         a:nth-child(8) i {
             font-size: 18px;
             position: relative;
             top: -2px;
-            padding-right: 14px;
+            padding-right: 16px;
         }
         a:nth-child(9) i {
             font-size: 22px;
