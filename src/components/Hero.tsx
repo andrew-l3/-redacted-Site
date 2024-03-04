@@ -41,7 +41,7 @@ function Hero() {
                         </div>
                     </div>
                     <span className='date'>2024</span>
-                    <div className='social_links'>
+                    <div className='media_links'>
                         {icons.map((item) => {
                             return (
                                 <a href='/#'><i className={'bi bi-' + item}></i></a>

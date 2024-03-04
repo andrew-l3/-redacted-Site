@@ -29,7 +29,7 @@ function Nav() {
                             <div className='cta_links'>
                                 <a href='/#'>Sponsorship</a>
                             </div>
-                            <div className='social_links'>
+                            <div className='media_links'>
                                 {icons.map((item) => {
                                     return (
                                         <a href='/#'><i className={'bi bi-' + item}></i></a>
