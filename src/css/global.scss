@@ -44,6 +44,11 @@ $bp: (
     pointer-events: none;
 }
 
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0; height: 0;
+}
+
 .global_container:before {
     @include background("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E", inherit, inherit, repeat, fixed, inherit, 100%, 100%, inherit, 0.12, 0);
 }
@@ -60,7 +65,7 @@ $bp: (
 }
 
 .global_sponsor:before {
-    @include background('../images/shape2.webp', cover, no-repeat, 50% 0%, absolute, inherit, 1234px, 100vw, color-burn, 0.3, 1); bottom: 35vh;
+    @include background('../images/shape2.webp', cover, no-repeat, 50% 0%, absolute, inherit, 1294px, 100vw, color-burn, 0.3, 1); bottom: 31vh;
 }
 
 @mixin primaryBtn($color, $background) {

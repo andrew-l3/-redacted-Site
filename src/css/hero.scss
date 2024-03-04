@@ -38,6 +38,16 @@
             padding-right: 14px;
             color: #fff;
         }
+
+        @include device(tablet) {
+            visibility: hidden;
+        }
+    }
+
+    .date {
+        @include device(tablet) {
+            visibility: hidden;
+        }
     }
 
 }
