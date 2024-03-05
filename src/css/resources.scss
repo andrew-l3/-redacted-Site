@@ -31,6 +31,14 @@
         a:is(:nth-last-child(-n+2), :nth-child(3)) span:first-child {
             width: 100%;
         }
+
+        a:nth-child(3) .accordion_title {
+            flex: 2; 
+        }
+
+        a:nth-child(3) .accordion_meta {
+            flex: 1; 
+        }
     }
 }
 
